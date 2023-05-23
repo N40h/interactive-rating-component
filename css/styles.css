@@ -1,0 +1,239 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--light-grey);
+    background: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* Contents */
+main {
+    width: 100%;
+}
+
+.top-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at top, hsl(218, 20%, 16%), hsl(215, 27%, 12%));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2.188rem;
+    margin-bottom: 1.6rem;
+    border-radius: 25px;
+}
+
+.star-icon {
+    height: 50px;
+    width: 50px;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-icon>img {
+    width: 35%;
+}
+
+.content,
+.rating {
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.content .rating-title {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+}
+
+.content .rating-text {
+    width: 90%;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-right: 0.9rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating>span {
+    font-size: 1.1rem;
+    height: 60px;
+    width: 60px;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rating>span:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.btn {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    background: var(--orange);
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 90px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--orange);
+    background: var(--white);
+    font-weight: 700;
+}
+
+.bottom-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at top, hsl(218, 20%, 16%), hsl(215, 27%, 12%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2.188rem;
+    margin-bottom: 1.6rem;
+    border-radius: 25px;
+}
+
+.thanks-icon {
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+.thanks-icon>img {
+    width: 100%;
+}
+
+.rating-selected {
+    color: var(--orange);
+    background: var(--dark-blue);
+    padding: 7px 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.bottom-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.thanks-title {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.9rem;
+}
+
+.thanks-text {
+    width: 88%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media Queries */
+@media (max-width: 375px) {
+    .top-container {
+        max-width: 340px;
+        padding: 1.6rem 1.8rem;
+    }
+
+    .star-icon {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .star-icon>img {
+        width: 30%;
+    }
+
+    .content .rating-title {
+    font-size: 1.5rem;
+    }
+
+    .content .rating-text {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    }
+    
+    .rating>span {
+        font-size: 0.9rem;
+        height: 40px;
+        width: 40px;
+    }
+    
+    .bottom-container {
+        max-width: 340px;
+    }
+    
+    .rating-selected {
+        margin-bottom: 30px;
+    }
+    
+    .thanks-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .thanks-text {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
