@@ -1,7 +1,6 @@
 /***********************
 /*         Variables
 /**********************/
-let selectedRating;
 let clickedButton = null;
 
 /***********************
@@ -19,8 +18,7 @@ const ratingChoice = document.querySelector('#rating-choice');
 /**********************/
 ratingButtons.forEach((button) =>
 	button.addEventListener('click', (e) => {
-		selectedRating = button.textContent;
-		ratingChoice.textContent = selectedRating;
+		ratingChoice.textContent = button.textContent;
 
 		e.target.style.background = 'hsl(217, 12%, 63%)';
 		e.target.style.color = 'hsl(0, 0%, 100%)';
