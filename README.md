@@ -11,10 +11,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -48,22 +44,22 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-	color: papayawhip;
-}
-```
+How to change the background of a selected/clicked button in JS
 
 ```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
+ratingButtons.forEach((button) =>
+	button.addEventListener('click', (e) => {
+		selectedRating = button.textContent;
+		ratingChoice.textContent = selectedRating;
+
+		e.target.style.background = 'hsl(217, 12%, 63%)';
+		e.target.style.color = 'hsl(0, 0%, 100%)';
+
+		if (clickedButton !== null) {
+			clickedButton.style.background = 'hsl(213, 19%, 18%)';
+		}
+
+		clickedButton = e.target;
+	})
+);
 ```
