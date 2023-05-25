@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-with-flexbox-and-vanilla-js-OPGYJcCs39)
+- Solution URL: [Solution](https://your-solution-url.com)
 - Live Site URL: [Live Site](https://soft-syrniki-db3863.netlify.app/)
 
 ## My process

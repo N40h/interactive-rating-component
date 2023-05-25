@@ -87,11 +87,13 @@ main {
     justify-content: space-between;
 }
 
-.rating>span {
+.rating>button {
     font-size: 1.1rem;
     height: 60px;
     width: 60px;
     background: var(--dark-blue);
+    color: var(--white);
+    border: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -99,8 +101,13 @@ main {
     cursor: pointer;
 }
 
-.rating>span:hover {
+.rating>button:hover {
     background: var(--orange);
+    color: var(--white);
+}
+
+.rating>button.active {
+    background: var(--light-grey);
     color: var(--white);
 }
 

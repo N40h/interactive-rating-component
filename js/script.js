@@ -20,11 +20,14 @@ ratingButtons.forEach((button) =>
 	button.addEventListener('click', (e) => {
 		ratingChoice.textContent = button.textContent;
 
-		e.target.style.background = 'hsl(217, 12%, 63%)';
-		e.target.style.color = 'hsl(0, 0%, 100%)';
+		if (button.classList.contains('active')) {
+			button.classList.remove('active');
+		} else {
+			button.classList.add('active');
+		}
 
-		if (clickedButton !== null) {
-			clickedButton.style.background = 'hsl(213, 19%, 18%)';
+		if (clickedButton !== null && clickedButton !== button) {
+			clickedButton.classList.remove('active');
 		}
 
 		clickedButton = e.target;
